@@ -23,3 +23,8 @@ jobs:
         with:
           name: Package
           path: build/libs
+      - name: Construindo o banco de dados
+        uses: harmon758/postgresql-action@v1
+        with:
+          postgresql version: '11'
+        
