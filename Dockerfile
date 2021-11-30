@@ -14,7 +14,7 @@ RUN adduser -D springboot
 
 USER springboot
 
-ADD --chown=springboot build/libs/*.jar /home/springboot/app.jar
+ADD --chown=springboot build/libs/*.jar /home/springboot/
 
 ENTRYPOINT exec java $JAVA_OPTS .jar /home/springboot/app.jar $SPRING_BOOT_OPTS
 
