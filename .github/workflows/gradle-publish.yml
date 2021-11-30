@@ -4,8 +4,9 @@
 name: Gradle Package
 
 on:
-  commit_comment:
-    types: [created]
+  push:
+    branches: 
+      - main
 
 jobs:
   build:
