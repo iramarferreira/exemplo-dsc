@@ -17,7 +17,7 @@ spring:
     activate:
       on-profile: "production"
 server:
-  port: ${PORT}
+  port: 0
 ---
 spring:
   config:
