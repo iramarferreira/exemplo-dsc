@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: "heroku"
+    active: "production"
 
 server:
   port: 9000
@@ -17,7 +17,7 @@ spring:
     activate:
       on-profile: "production"
 server:
-  port: 0
+  port: ${PORT}
 ---
 spring:
   config:
