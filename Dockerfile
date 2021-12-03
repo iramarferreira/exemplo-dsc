@@ -4,3 +4,4 @@ COPY ./build/libs/*.jar /usr/src/myapp/
 WORKDIR /usr/src/myapp
 ENTRYPOINT ["ls"]
 ENTRYPOINT ["java", "-jar","*.jar" ]
+CMD
