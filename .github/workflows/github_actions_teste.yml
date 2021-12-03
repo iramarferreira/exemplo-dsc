@@ -19,18 +19,15 @@ jobs:
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Build with Gradle
         run: ./gradlew build
-      - uses: actions/upload-artifact@v2
-        with:
-          name: Package
-          path: build/libs
-      - name: Construindo o banco de dados
-        uses: harmon758/postgresql-action@v1
-        with:
-          postgresql version: '11'
+      #- uses: actions/upload-artifact@v2
+      #  with:
+      #    name: Package
+      #    path: build/libs
       - name: Deploy no Heroku
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "exemplo-dsc" #Must be unique in Heroku
           heroku_email: "iramarbsi@gmail.com"
+          usedocker: "true"
 
