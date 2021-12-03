@@ -23,4 +23,4 @@ USER myuser
 
 #ENTRYPOINT ["java", "-Dspring.profiles.active=dev", "-jar","Exemplo-0.0.1-SNAPSHOT.jar" ]
 CMD java -Dspring.profiles.active=production -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/Exemplo-0.0.1-SNAPSHOT.jar
-CMD ["java", "-Dspring.profiles.active=production","-jar","Exemplo-0.0.1-SNAPSHOT.jar" ]
+CMD ["java", "-Dspring.profiles.active=production", "-Dserver.port=$PORT","-jar","Exemplo-0.0.1-SNAPSHOT.jar" ]
