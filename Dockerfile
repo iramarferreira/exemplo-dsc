@@ -1,6 +1,6 @@
 FROM openjdk:8-alpine
 # adicionando usuário para poder executar
-COPY ./build/libs/*.jar /usr/src/myapp/app.jar
+COPY ./build/libs/*.jar /usr/src/myapp/
 WORKDIR /usr/src/myapp
 ENTRYPOINT ["ls"]
-ENTRYPOINT ["java", "-jar","app.jar" ]
+ENTRYPOINT ["java", "-jar","*.jar" ]
