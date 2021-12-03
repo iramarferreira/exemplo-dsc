@@ -3,5 +3,5 @@ FROM openjdk:8-alpine
 COPY ./build/libs/*.jar /usr/src/myapp/
 WORKDIR /usr/src/myapp
 ENTRYPOINT ["ls"]
-ENTRYPOINT ["java", "-jar","*.jar" ]
-CMD
+# ENTRYPOINT ["java", "-jar","*.jar" ]
+CMD "java -jar *.jar"
