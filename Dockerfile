@@ -1,18 +1,18 @@
 FROM openjdk:8-alpine
 # adicionando usuário para poder executar
 
-RUN mkdir /app
-COPY ./build/libs/*.jar /app
-WORKDIR /app
+#RUN mkdir /app
+#COPY ./build/libs/*.jar /app
+#WORKDIR /app
 # Copiando os arquivos
-#COPY . .
+COPY . .
 # Gerar o build
-#RUN ./gradlew build
+RUN ./gradlew build
 
 # Não funciona do heroku
 # EXPOSE $PORT
 
-#WORKDIR /build/libs
+WORKDIR /build/libs
 #ENTRYPOINT ["ls"]
 #RUN "ls"
 #CMD ["ls"]
