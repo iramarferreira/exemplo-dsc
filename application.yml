@@ -2,8 +2,8 @@
 #  profiles:
 #    active: "production"
 
-server:
-  port: 9000
+#server:
+#  port: 9000
 ---
 spring:
   config:
@@ -16,8 +16,8 @@ spring:
   config:
     activate:
       on-profile: "production"
-server:
-  port: $PORT
+#server:
+#  port: $PORT
 ---
 spring:
   config:
